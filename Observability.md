@@ -80,7 +80,7 @@ helm install monitoring prometheus-community/kube-prometheus-stack -n monitoring
 ```
 
 ```bash
-kubectl get secret --namespace monitoring -l app.kubernetes.io/component=admin-secret -o jsonpath="{.items[0].data.admin-user}" | base64 --decode ; echo 
+kubectl get secret -n monitoring monitoring-grafana -o jsonpath="{.data.admin-password}" | %{[Text.Encoding]::UTF8.GetString([Convert]::FromBase64String($_))} 
 ```
 
 # Step 4: Verify the Installation
