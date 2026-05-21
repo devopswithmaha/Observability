@@ -79,6 +79,7 @@ kubectl create ns monitoring
 helm install monitoring prometheus-community/kube-prometheus-stack -n monitoring -f ./custom_kube_prometheus_stack.yml
 ```
 
+### To get  Grafana Password 
 ```bash
 kubectl get secret -n monitoring monitoring-grafana -o jsonpath="{.data.admin-password}" | %{[Text.Encoding]::UTF8.GetString([Convert]::FromBase64String($_))} 
 
