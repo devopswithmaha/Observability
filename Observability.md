@@ -81,6 +81,8 @@ helm install monitoring prometheus-community/kube-prometheus-stack -n monitoring
 
 ```bash
 kubectl get secret -n monitoring monitoring-grafana -o jsonpath="{.data.admin-password}" | %{[Text.Encoding]::UTF8.GetString([Convert]::FromBase64String($_))} 
+
+#  password:  KpfQmda3PVsmkqwypHFRXhJ0jPKfIfEXRyKzpcsG
 ```
 
 # Step 4: Verify the Installation
