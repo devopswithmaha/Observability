@@ -1,0 +1,22 @@
+
+
+# Observability 
+
+
+###  devops and SRE
+- prometheus
+- Garafana
+- ELK
+- Jaeger 
+
+1) Node_exporter
+2) DB_exporter
+3) kube-state
+
+### developer
+4) instruments   like how login & reg  from 30day  on app
+metric type
+- counter -> EX:  increase login  from 30days
+- cauge   -> EX:  increase & decrement  ( like cpu utilization)
+- histogram-> http requtest duration as buket> 5s, buket>10s buket>105
+- summary -> 
